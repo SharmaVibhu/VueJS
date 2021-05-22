@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title>A First App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body style="background-color: hsl(218deg 65% 46%);">
+  <div id="app2" style="background-color: hsl(0, 0%, 90%);">
+    <div>
+      <label class="c1" for="goal1">HTML5</label>
+      <ul class="c2">
+        <li class="c3" v-for="goal1 in goals1">{{ goal1 }}</li>
+      </ul>
+      <input class="c4" type="text" id="goal1" v-model="enteredValue1" />
+      <button v-on:click="addGoal1">+ add another card</button>
+    </div>
+  </div>
+  <div id="app1" style="background-color: hsl(0, 0%, 90%);">
+    <div>
+      <label class="c1" for="goal2">CSS3</label>
+      <ul class="c2">
+        <li class="c3" v-for="goal2 in goals2">{{ goal2 }}</li>
+      </ul>
+      <input class="c4" type="text" id="goal2" v-model="enteredValue2" />
+      <button v-on:click="addGoal2">+ add another card</button>
+    </div>
+  </div>
+
+  <div id="app3" style="background-color: hsl(0, 0%, 90%);">
+    <div>
+      <label class="c1" for="goal3">Javascript</label>
+      <ul class="c2">
+        <li class="c3" v-for="goal3 in goals3">{{ goal3 }}</li>
+      </ul>
+      <input class="c4" type="text" id="goal3" v-model="enteredValue3" />
+      <button v-on:click="addGoal3">+ add another card</button>
+    </div>
+  </div>
+
+  <div id="addTodoListDiv">
+    <input id="addTodoListInput" class="comment">
+    <button id="addTodoListButton" class="btn-save" style="background:hsl(217deg 56% 59%);">+ Add another
+      list
+    </button>
+
+    <div id="root">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
